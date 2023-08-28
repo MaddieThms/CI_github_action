@@ -13,8 +13,8 @@ jobs:
   docker:
     needs: test-front
     if: github.ref == 'refs/heads/main'
-    using: "node16"
     runs-on: ubuntu-latest
+      - using: "node16"
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
